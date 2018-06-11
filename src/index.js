@@ -5,11 +5,14 @@ import 'animate.css/animate.css'
 import 'wowjs/dist/wow'
 import './style.css';
 import './media.css';
-import App from './component/App/index'
+import Header from './component/Header/index'
+import registerServiceWorker from './registerServiceWorker';
+
 
 ReactDOM.render(
     <div>
-        <App/>
+        <Header/>
     </div>,
     document.getElementById('root')
 )
+registerServiceWorker();

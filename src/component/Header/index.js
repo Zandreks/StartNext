@@ -1,16 +1,15 @@
 import React from 'react';
 import "./img/logo.png"
-export default class App extends React.Component{
+export default class header extends React.Component{
 
     constructor(props) {
         super(props);
         this.state = {classelemetn: true};
-        this.scrollMetod = this.scrollMetod.bind(this)
     }
 
     render(){
         return(
-            <div onScroll={this.scrollMetod}>
+            <div >
             <div className="header">
                 <div className={this.state.classelemetn ? 'container-fluid site-header':'container-fluid site-header scrol_headwr'} >
                     <div className="container">
@@ -36,12 +35,17 @@ export default class App extends React.Component{
         )
     }
     componentDidMount(){
-
+        window.onscroll = ()=> {
+            var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            console.log(scrolled)
+            if(scrolled>1){
+                this.setState({classelemetn: false});
+            }else{
+                this.setState({classelemetn: true});
+            }
+          }
+          
     }
-    scrollMetod(){
-        console.log(1)
-        this.setState({classelemetn: !this.state.classelemetn});
 
-    }
 }
 
