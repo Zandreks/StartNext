@@ -1,5 +1,5 @@
 import React from 'react';
-import "./img/logo.png"
+import logo from "./img/logo.png"
 export default class header extends React.Component{
 
     constructor(props) {
@@ -15,7 +15,7 @@ export default class header extends React.Component{
                     <div className="container">
                         <div className="site-branding col-md-4 col-sm-6 col-xs-12">
                             <a href="/" className="custom-logo-link">
-                                <img width="200" height="69" src="img/logo.png" className="custom-logo"
+                                <img width="200" height="69" src={logo} className="custom-logo"
                                      alt="Разработка и продвижение сайтов в Астане"/>
                             </a>
                         </div>
