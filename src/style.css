@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+a{
+    text-decoration: none;
+}
+body{
+    background: #283036;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #000;
+}
+a:active{
+    text-decoration: none;
+}
+.header{
+    overflow: hidden
+}
+.site-header{
+    padding: 15px 0;
+    z-index: 898;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.scrol_headwr{
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.69);
+}
+.header-image{
+    overflow: hidden;
+    text-align: center;
+    background: url("img/head_fon.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-info {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 133px;
+
+}
+.header-subtext {
+    display: table;
+    margin: 0 auto 30px;
+    padding: 0 15px 30px;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    letter-spacing: 5px;
+    color: #000;
+
+}
+.header-text {
+    margin: 0 auto;
+    color: #000;
+    font-size: 76px;
+    display: table;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+button, .button, input[type="button"], input[type="reset"], input[type="submit"] {
+    font-size: 14px;
+    padding: 12px 30px;
+    border: 1px solid #fcd088;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+.header-button {
+    color: #000000;
+    background: #fcd088;
+    display: table;
+    margin: 45px auto 0;
+}
+.button {
+    -webkit-appearance: none;
+}
+
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.servis, .site-info, .skil-bar, .me-works, .razrab{
+    color: #ffffff;
+    font-weight: bold;
+}
+.servis h2{
+    padding-top:20px; 
+}
+
+.servis-img img{
+    height: 150px;
+
+}
+.servis-img{
+    margin-top: 20px;
+}
+
+.opis-text{
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.progress {
+    height: 35px;
+    margin: 10px 0 10px 0;
+
+}
+.progress .skill {
+    font: normal 12px "Open Sans Web";
+    line-height: 35px;
+    padding: 0;
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+}
+.progress .skill .val {
+    float: right;
+    font-style: normal;
+    margin: 0 20px 0 0;
+}
+
+.progress-bar {
+    text-align: left;
+    transition-duration: 3s;
+    width: 0;
+}
+
+
+.works-content div{
+  margin-bottom: 10px;
+}
+.works-cont {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.works-cont img{
+    margin: 0 auto;
+}
+.black-fon{
+   position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    right: -100%;
+    background: rgba(0, 0, 0, 0.69);
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: right, 0.5s;
+    transition: right,  0.5s;
+
+    opacity: 1;
+}
+.black-fon:hover{
+    opacity: 1;
+    right: 0;
+}
+
+
+.works-cont:hover .black-fon {
+    right: 0;
+}
+.project-title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.project-title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.project-title a::before {
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    left: 0;
+    top: -5px;
+    margin-left: 20%;
+    -webkit-transition: width 0.5s 0.5s;
+    transition: width 0.5s 0.5s;
+}
+.project-title a::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    margin-right: 20%;
+    -webkit-transition: width 0.5s 0.5s;
+    transition: width 0.5s 0.5s;
+}
+.works-cont:hover .project-title a::before,
+.works-cont:hover .project-title a::after {
+    width: 60%;
+}
+
+
+.h-ops {
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+.text-ops{
+    text-align: justify;
+    color: #ffffff;
+    font-weight: bold;
+}
+.sena-ops{
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+}
+#red-ops{
+    background: #bf2a2a;
+}
+#fio-ops{
+    background: #c03eda;
+}
+#blue-ops{
+    background: #733cf1;
+}
+.site-dosk{
+    position: relative;
+    padding-top: 96px;
+    background: url("img/opissite_.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blok_fon{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.62);
+}
+
+
+
+.raz_icon{
+    font-size: 24px;
+}
+.raz_icon i{
+    margin-left: 5px;
+}
+.raz_icon a{
+    color: #ffffff;
+}
+
+.form-from h3{
+    color: white;
+    text-align: center;
+}
+.form-from label{
+    color: white;
+    font-size: 18px;
+}
+
+
+.footer-wtap{
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+.logo-footer{
+    padding: 30px 30px 15px 15px;
+
+}
+.coopy{
+    color: #a1a8a8;
+    margin-top: 10px;
+}
+.content-info{
+    padding: 60px 15px;
+    border-left: 1px solid rgba(255,255,255,0.08);
+
+}
+.footer-contact-block {
+    display: inline-block;
+    text-align: center;
+    width: 48%;
+    padding: 0 20px;
+    color: #a1a8a8;
+
+}
+.footer-contact-block a{
+    color: #a1a8a8;
+
+}
+.footer-contact-block span {
+    display: block;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.footer-contact-block .fa {
+    font-size: 22px;
+}
+.logo-footer img{
+    margin: 0 auto;
+}
+#toTop {
+    width:100px;
+
+    text-align:center;
+    padding:5px;
+    position:fixed;
+    bottom:10px;
+    left: 10px;
+    cursor:pointer;
+    display:none;
+    font-size:11px;
+}
+.bg{
+    margin-top: 5px;
+    font-size: 15px;
+}
+body{
+font-weight: 100;
+}
