@@ -1,22 +1,21 @@
 import React from 'react';
-import "./img/logo.png"
-export default class App extends React.Component{
+import logo from "./img/logo.png"
+export default class header extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {classelemetn: true};
-        this.scrollMetod = this.scrollMetod.bind(this)
+        this.state = {classelemetn: true, buttonopacty:1};
     }
 
     render(){
         return(
-            <div onScroll={this.scrollMetod}>
+            <div >
             <div className="header">
                 <div className={this.state.classelemetn ? 'container-fluid site-header':'container-fluid site-header scrol_headwr'} >
                     <div className="container">
                         <div className="site-branding col-md-4 col-sm-6 col-xs-12">
                             <a href="/" className="custom-logo-link">
-                                <img width="200" height="69" src="img/logo.png" className="custom-logo"
+                                <img width="200" height="69" src={logo} className="custom-logo"
                                      alt="Разработка и продвижение сайтов в Астане"/>
                             </a>
                         </div>
@@ -24,7 +23,7 @@ export default class App extends React.Component{
                 </div>
                 <div className="header-image">
                     <div className="container">
-                        <div className="header-info" style={{opacity: 1}}>
+                        <div className="header-info" style={{opacity: this.state.buttonopacty}}>
                             <h1 className="header-subtext">Создание, продвижение сайтов и другие IT Услуги</h1>
                             <h3 className="header-text">Добро пожаловать</h3>
                             <a className="button header-button" href="#servis">Ознакомиться</a>
@@ -36,12 +35,27 @@ export default class App extends React.Component{
         )
     }
     componentDidMount(){
+        let flag = false;
+        let scrollCoef = 0.0035;
 
-    }
-    scrollMetod(){
-        console.log(1)
-        this.setState({classelemetn: !this.state.classelemetn});
+        window.onscroll = ()=> {
+            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
+            let opacty = ()=>{
+              return 1- scrolled  * scrollCoef
+            };
+            this.setState({buttonopacty:opacty() });
+            if(scrolled >=10 && flag === false){
+                this.setState({classelemetn: false});
+                flag = true;
+            }
+            if (scrolled <=5 && flag === true) {
+                this.setState({classelemetn: true});
+                flag= false;
+            }
+          }
+          
     }
+
 }
 

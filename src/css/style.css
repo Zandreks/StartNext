@@ -34,7 +34,7 @@ a:active{
 .header-image{
     overflow: hidden;
     text-align: center;
-    background: url("img/head_fon.jpg");
+    background: url("../img/head_fon.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -252,7 +252,7 @@ hr{
 .site-dosk{
     position: relative;
     padding-top: 96px;
-    background: url("img/opissite_.jpg");
+    background: url("../img/opissite_.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
