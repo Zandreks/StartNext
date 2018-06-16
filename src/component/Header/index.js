@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from "./img/logo.png"
+import { Link } from 'react-scroll'
 export default class header extends React.Component{
 
     constructor(props) {
         super(props);
         this.state = {classelemetn: true, buttonopacty:1};
+
     }
 
     render(){
@@ -21,19 +23,25 @@ export default class header extends React.Component{
                         </div>
                     </div>
                 </div>
+
                 <div className="header-image">
                     <div className="container">
                         <div className="header-info" style={{opacity: this.state.buttonopacty}}>
+                   
                             <h1 className="header-subtext">Создание, продвижение сайтов и другие IT Услуги</h1>
                             <h3 className="header-text">Добро пожаловать</h3>
-                            <a className="button header-button" href="#servis">Ознакомиться</a>
+                            <Link activeClass="active" to="serve" spy={true} smooth={true} offset={50} duration={500} className="button header-button">Ознакомиться </Link>
+
                         </div>
+                        
+
                     </div>
                 </div>
             </div>
             </div>
         )
     }
+
     componentDidMount(){
         let flag = false;
         let scrollCoef = 0.0035;

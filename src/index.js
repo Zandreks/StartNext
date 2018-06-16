@@ -7,11 +7,13 @@ import './css/style.css';
 import './css/media.css';
 import Header from './component/Header/index'
 import registerServiceWorker from './registerServiceWorker';
+import Serve from './component/Serve'
 
 
 ReactDOM.render(
     <div>
         <Header/>
+        <Serve/>
     </div>,
     document.getElementById('root')
 )
