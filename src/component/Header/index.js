@@ -1,17 +1,19 @@
 import React from 'react';
 import logo from "./img/logo.png"
 import { Link } from 'react-scroll'
+
 export default class header extends React.Component{
 
     constructor(props) {
         super(props);
         this.state = {classelemetn: true, buttonopacty:1};
+        this.animetescroll = this.animetescroll.bind(this)
 
     }
 
     render(){
         return(
-            <div >
+            <div onScroll={this.animetescroll} >
             <div className="header">
                 <div className={this.state.classelemetn ? 'container-fluid site-header':'container-fluid site-header scrol_headwr'} >
                     <div className="container">
@@ -24,7 +26,7 @@ export default class header extends React.Component{
                     </div>
                 </div>
 
-                <div className="header-image">
+                <div className="header-image bounce">
                     <div className="container">
                         <div className="header-info" style={{opacity: this.state.buttonopacty}}>
                    
@@ -48,7 +50,6 @@ export default class header extends React.Component{
 
         window.onscroll = ()=> {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-
             let opacty = ()=>{
               return 1- scrolled  * scrollCoef
             };
@@ -62,8 +63,11 @@ export default class header extends React.Component{
                 flag= false;
             }
           }
-          
-    }
 
+
+    }
+    animetescroll(){
+        console.log(1)
+    }
 }
 
