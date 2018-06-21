@@ -57,7 +57,8 @@ export default class Form extends React.Component{
             }
         })
             .then((response) => {
-                this.setState({susses:"Сообщение отправлено"})
+                this.setState({susses:"Сообщение отправлено",name:"",phone:"",text:""})
+
             })
             .catch( (error)=> {
                 alert(`Ошибка сервера ${error}`);
