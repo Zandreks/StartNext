@@ -57,7 +57,11 @@ export default class Form extends React.Component{
             }
         })
             .then((response) => {
-                this.setState({susses:"Сообщение отправлено",name:"",phone:"",text:""})
+                this.setState({susses:"Сообщение отправлено"})
+                this.setState({name:""})
+                this.setState({phone:""})
+                this.setState({text:""})
+                console.log(response)
 
             })
             .catch( (error)=> {
