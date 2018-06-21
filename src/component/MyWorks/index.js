@@ -15,7 +15,7 @@ export default class Index extends React.Component{
 
                                     <div className="black-fon" >
                                         <h3 className="project-title">
-                                            <a href="http://greental.kz/" target="_blank">GreenTal</a>
+                                            <a href="http://greental.kz/" target="_blank" rel="noopener noreferrer">GreenTal</a>
                                         </h3>
                                     </div>
                             </div>
@@ -27,7 +27,7 @@ export default class Index extends React.Component{
 
                                     <div className="black-fon" >
                                         <h3 className="project-title">
-                                            <a href="https://cargo-trans.kz/" target="_blank">cargo-trans.kz</a>
+                                            <a href="https://cargo-trans.kz/" target="_blank" rel="noopener noreferrer">cargo-trans.kz</a>
                                         </h3>
                                     </div>
                             </div>
@@ -39,7 +39,7 @@ export default class Index extends React.Component{
                                     <div className="black-fon" >
                                         <h3 className="project-title">
                                             <a href="http://maisondestalents.kz/"
-                                               target="_blank">maisondestalents.kz</a>
+                                               target="_blank" rel="noopener noreferrer">maisondestalents.kz</a>
                                         </h3>
                                     </div>
                             </div>
@@ -50,7 +50,7 @@ export default class Index extends React.Component{
 
                                     <div className="black-fon" >
                                         <h3 className="project-title">
-                                            <a href="https://boltap.com/" target="_blank">boltap.com</a>
+                                            <a href="https://boltap.com/" target="_blank" rel="noopener noreferrer">boltap.com</a>
                                         </h3>
                                     </div>
                             </div>
@@ -61,7 +61,7 @@ export default class Index extends React.Component{
 
                                     <div className="black-fon" >
                                         <h3 className="project-title">
-                                            <a href="http://eurocode.kz/" target="_blank">eurocode.kz</a>
+                                            <a href="http://eurocode.kz/" target="_blank" rel="noopener noreferrer">eurocode.kz</a>
                                         </h3>
                                     </div>
                             </div>

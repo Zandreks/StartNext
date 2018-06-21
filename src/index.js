@@ -14,6 +14,7 @@ import SiteBlok from "./component/SiteBlok"
 import Contact from "./component/Contact"
 import Form from "./component/Form"
 import Footer from "./component/Footer"
+import ScrollTop from "./component/ScrollTop"
 ReactDOM.render(
     <div>
         <Header/>
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Contact/>
         <Form/>
         <Footer/>
+        <ScrollTop/>
 
     </div>,
     document.getElementById('root')

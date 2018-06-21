@@ -8,7 +8,7 @@ export default class Footer extends React.Component{
                         <div className="row">
                             <div className="col-md-4">
                                 <div className="logo-footer">
-                                    <img src="/img/logo.png" className="img-fluid"/>
+                                    <img src="/img/logo.png"  alt="Создание сайтов продвижение и другие IT услуги" className="img-fluid"/>
                                 </div>
                             </div>
                             <div className="col-md-8">

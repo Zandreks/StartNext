@@ -42,7 +42,6 @@ export default class header extends React.Component{
     componentDidMount(){
         let flag = false;
         let scrollCoef = 0.0035;
-
         window.onscroll = ()=> {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -59,6 +58,16 @@ export default class header extends React.Component{
                 this.setState({classelemetn: true});
                 flag= false;
             }
+
+            if (scrolled >100){
+                document.getElementById('toTop').style.display = "block";
+
+
+            }
+            else {
+                document.getElementById('toTop').style.display = "none";
+            }
+
           }
 
 

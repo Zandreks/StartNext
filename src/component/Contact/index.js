@@ -10,15 +10,15 @@ export default class Contact extends React.Component{
                         <div className="row">
                             <div className="col-md-4 offset-md-4">
 
-                                <img src="/img/IMG_3076.JPG" className="img-fluid rounded-circle"/>
+                                <img src="/img/IMG_3076.JPG"  alt="Создание сайтов продвижение и другие IT услуги" className="img-fluid rounded-circle"/>
                                     <h3 className="text-center">Северьянов Максим </h3>
                                     <p className="text-center">Web-разработчик, It-специалист </p>
 
                                     <div className="raz_icon text-center">
-                                        <a href="https://t.me/zandreks" target="_blank">
+                                        <a href="https://t.me/zandreks" target="_blank" rel="noopener noreferrer">
                                             <i className="fa fa-telegram" aria-hidden="true"></i>
                                         </a>
-                                        <a href="tel:+77021867028" target="_blank">
+                                        <a href="tel:+77021867028" target="_blank" rel="noopener noreferrer">
                                             <i className="fa fa-phone" aria-hidden="true"></i>
                                         </a>
                                         <a href="mailto:zandreks@gmail.com?subject=Вопрос по сайту">

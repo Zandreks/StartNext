@@ -1,0 +1,5 @@
+User-agent: *
+Host: startnext.kz
+Sitemap:https://startnext.kz/sitemap.xml
+Disallow: /podtverdite.html
+Disallow: /free-landing.html

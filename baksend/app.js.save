@@ -1,0 +1,59 @@
+const express = require("express");
+const bodyarser = require('body-parser');
+const htmlspecialchars = require('htmlspecialchars');
+const https = require("https");
+const fs = require("fs");
+const mysqlconectdb = require("./components/db/db");
+const mailpost = require("./components/mail/mail");
+const mysql = require("mysql");
+
+const options = {
+  cert: fs.readFileSync('./fullchain.pem'),
+  key: fs.readFileSync('./privkey.pem')
+}
+
+let app = express();
+
+app.use(bodyarser.urlencoded({ extended: true }));
+app.use(bodyarser.json());
+app.use("/public", express.static('public'));
+app.use((req, res, next) => {
+  if (req.url != '/') {
+    res.status(404).send('Not found');
+
+  }
+  next();
+});
+
+app.get("/", (reg, res) => {
+  var query = ""
+  var query2 = ""
+  mysqlconectdb.con.query("SELECT * FROM servis", function (err, result, fields) {
+    if (err) throw err;
+    query = result;
+
+  })
+  mysqlconectdb.con.query("SELECT * FROM site", function (err, result2, fields) {
+    if (err) throw err;
+    query2 = result2;
+  })
+  setTimeout(function(){
+    res.render("index.ejs", { post:query, site:query2 });
+  },10)
+  
+
+})
+
+app.post("/", (reg, res) => {
+  let name = htmlspecialchars(reg.body.name);
+  let phone = htmlspecialchars(reg.body.phone);
+  let comit = htmlspecialchars(reg.body.comit);
+  if (name.length == 0 || phone.length < 15 || comit.length == 0) {
+    res.send("Что-то пошло не так ")
+    return false;
+  }
+  mailpost.mailpost(mailpost.transporter, name, phone, comit, res)
+})
+
+app.listen(80, () => {
+  console.log("server start")
