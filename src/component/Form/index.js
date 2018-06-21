@@ -57,7 +57,7 @@ export default class Form extends React.Component{
             }
         })
             .then((response) => {
-                this.setState({susses:response})
+                this.setState({susses:"Сообщение отправлено"})
             })
             .catch( (error)=> {
                 alert(`Ошибка сервера ${error}`);
@@ -90,7 +90,7 @@ export default class Form extends React.Component{
                                         <p className="bg-danger text-white bg p_mess" >{this.state.error.text}</p>
                                     </div>
                                     <input type="submit" className="btn btn-success btn-block" value="Отправить"/>
-                                    <p className="bg-success text-white bg p_ok"></p>
+                                    <p className="bg-success text-white bg p_ok">{this.state.susses}</p>
 
                                 </form>
                             </div>
