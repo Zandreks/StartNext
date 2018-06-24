@@ -1,6 +1,5 @@
 import React from 'react'
 import {Element } from 'react-scroll'
-import {WOW} from 'wowjs/dist/wow'
 
 const posts =[{
     id:1,
@@ -57,10 +56,7 @@ const postslist = posts.map(post=>{
     )
 })
 export default class  Serve extends React.Component{
-    componentDidMount() {
-        new WOW().init();
 
-    }
         constructor(props) {
         super(props);
         this.state = {flag: true};

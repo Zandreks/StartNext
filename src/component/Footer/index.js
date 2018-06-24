@@ -1,5 +1,5 @@
 import React from 'react'
-export default class Footer extends React.Component{
+export default class Footer extends React.Component{z
     render(){
         return(
             <section className="my-5">
