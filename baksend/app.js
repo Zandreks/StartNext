@@ -25,9 +25,9 @@ app.get("/", (reg, res) => {
 });
 
 app.post("/", (reg, res) => {
-  let name = htmlspecialchars(reg.body.name);
-  let phone = htmlspecialchars(reg.body.phone);
-  let comit = htmlspecialchars(reg.body.text);
+  let name = htmlspecialchars(reg.body.params.name);
+  let phone = htmlspecialchars(reg.body.params.phone);
+  let comit = htmlspecialchars(reg.body.params.text);
   if (name.length == 0 || comit.length == 0) {
     res.send("Что-то пошло не так ");
     return false;
