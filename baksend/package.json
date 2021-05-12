@@ -13,6 +13,6 @@
     "express": "^4.16.2",
     "helmet": "^3.10.0",
     "htmlspecialchars": "^1.0.5",
-    "nodemailer": "^4.4.2"
+    "nodemailer": "^6.4.16"
   }
 }
